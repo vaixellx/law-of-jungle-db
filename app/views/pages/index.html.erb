@@ -19,4 +19,22 @@
   </div> <!-- .container -->
 </div> <!-- .jumbotron -->
 
+<div class="container">
+  <h2>
+    Recent Cards
+    <div class="pull-right">
+      <%= link_to 'View All', cards_path, class: 'btn btn-link' %>
+    </div> <!-- .pull-right -->
+  </h2>
+  <hr>
+
+  <div class="row">
+    <% @cards.each do |card| %>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <%= render partial: 'cards/card', object: card, locals: { disabled_action: true } %>
+      </div> <!-- .col-xs-12 col-sm-12 col-md-6 col-lg-4 -->
+    <% end %>
+  </div> <!-- .row -->
+</div> <!-- .container -->
+
 <%# TODO: Render latest card. %>

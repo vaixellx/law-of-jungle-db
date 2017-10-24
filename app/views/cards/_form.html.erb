@@ -1,0 +1,74 @@
+<div class="card-container">
+  <% if @card.errors.any? %>
+    <div class="alert alert-danger">
+      <%= @card.errors.full_messages.join("<br>").html_safe %>
+    </div> <!-- .alert alert-danger -->
+  <% end %>
+
+  <%= form_for @card, { html: { class: 'card-form' } } do |f| %>
+    <%= card_status @card.status %>
+
+    <div class="card">
+      <%= f.text_field :title, class: 'card-title' %>
+      <div class="card-type-icon">
+        <%= card_type_icons(@card.card_type) %>
+      </div> <!-- .card-type -->
+
+      <%= f.text_area :description, class: 'card-description' %>
+    </div> <!-- .card -->
+
+    <div class="d-inline-block" style="margin: 4px 8px 0 0;width: 110px">Card type:</div> <!-- .pull-left -->
+    <div class="dropdown d-inline-block">
+      <a href="#" class="js--btn-card-type btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" style="width: 160px">
+        <span class="text">
+          <% if @card.card_type.present? %>
+            <%= card_type_name @card.card_type %>
+          <% else %>
+            - Please Select -
+          <% end %>
+        </span> <!-- .text -->
+      </a> <!-- .btn-default btn-sm -->
+
+      <div class="js--card-type-dropdown dropdown-menu">
+        <% card_type_collection.each do |text, value| %>
+          <a href="#" class="dropdown-item js--card-type-selector" data-value="<%= value %>" %><%= text %></a>
+        <% end %>
+      </div> <!-- .dropdown-menu -->
+    </div> <!-- .dropdown -->
+    <%= f.hidden_field :card_type %>
+
+    <div class="d-inline-block" style="margin: 4px 8px 0 0;width: 110px">Creator:</div> <!-- .pull-left -->
+    <div class="dropdown d-inline-block">
+      <a href="#" class="js--btn-card-creator btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" style="width: 160px;">
+        <span class="text">
+          <% if @card.creator.present? %>
+            <%= @card.creator %>
+          <% else %>
+            - Please Select -
+          <% end %>
+        </span> <!-- .text -->
+      </a> <!-- .btn-default btn-sm -->
+
+      <div class="js--card-creator-dropdown dropdown-menu">
+        <% Card::CREATORS.each do |value| %>
+          <a href="#" class="dropdown-item js--card-creator-selector" data-value="<%= value %>" %><%= value %></a>
+        <% end %>
+      </div> <!-- .dropdown-menu -->
+    </div> <!-- .dropdown -->
+    <%= f.hidden_field :creator %>
+
+    <div style="margin: 15px 0;">
+      <div class="row">
+        <div class="col-sm-6 col-xs-12">
+          <%= f.submit 'Save', class: 'btn btn-primary btn-block' %>
+          <div style="height: 8px"></div>
+        </div> <!-- .col-sm-6 col-xs-12 -->
+
+        <div class="col-sm-6 col-xs-12">
+          <%= link_to 'Back', cards_path, class: 'btn btn-light btn-block' %>
+          <div style="height: 8px"></div>
+        </div> <!-- .col-sm-6 col-xs-12 -->
+      </div> <!-- .row -->
+    </div>
+  <% end %>
+</div> <!-- .card-form -->

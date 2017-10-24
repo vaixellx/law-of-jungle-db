@@ -1,0 +1,89 @@
+html {
+  body {
+    font-family: 'Mitr', sans-serif;
+    color: #555;
+  }
+
+  .card-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 290px;
+
+    .badge {
+      font-size: 13px;
+      padding: 9px 15px;
+    }
+  }
+
+  .card {
+    background-image: asset_url('card-template.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Sriracha', cursive;
+    height: 406px;
+    margin: 10px 0;
+    position: relative;
+    width: 290px;
+
+    .card-title {
+      background: transparent;
+      border: 1px solid transparent;
+      box-shadow: none;
+      color: rgba(#000, 0.7);
+      font-size: 15px;
+      outline: none;
+      padding-left: 5px;
+      padding-right: 5px;
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      width: 233px;
+    }
+
+    .card-image-placeholder {
+      color: rgba(#383, 0.1);
+      font-size: 70px;
+      position: absolute;
+      text-align: center;
+      top: 100px;
+      width: 100%;
+    }
+
+    input.card-title { border-color: rgba(#000, 0.1); }
+
+    .card-description {
+      background: transparent;
+      border: 1px solid transparent;
+      box-shadow: none;
+      color: rgba(#000, 0.7);
+      font-size: 15px;
+      outline: none;
+      padding: 5px;
+      position: absolute;
+      left: 12px;
+      height: 144px;
+      resize: none;
+      top: 248px;
+      white-space: pre-wrap;
+      width: 264px;
+    }
+
+    textarea.card-description {
+      border-color: rgba(#000, 0.1);
+    }
+
+    .card-type-icon {
+      color: #383;
+      font-size: 17px;
+      height: 26px;
+      padding: 0 5px;
+      position: absolute;
+      right: 13px;
+      top: 12px;
+      width: 28px;
+    }
+  }
+}

@@ -46,10 +46,10 @@
   </div> <!-- .row -->
 
   <div class="card">
-    <div class="card-type-icon"><%= card_type_icon(card.card_type) %></div> <!-- .pull-right -->
     <%= card_type_icon card.card_type, 'card-image-placeholder' %>
     <div class="card-title"><%= card.title %></div> <!-- .card-title -->
     <div class="card-description"><%= card.description %></div> <!-- .card-description -->
+    <div class="card-type-icon"><%= card_type_icon(card.card_type) %></div> <!-- .pull-right -->
   </div> <!-- .card -->
 
   <div class="row card-creator-detail">

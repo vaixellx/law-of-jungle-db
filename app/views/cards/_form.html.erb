@@ -14,6 +14,8 @@
         <%= card_type_icons(@card.card_type) %>
       </div> <!-- .card-type -->
 
+      <%= card_type_icons @card.card_type, 'card-image-placeholder' %>
+
       <%= f.text_area :description, class: 'card-description' %>
     </div> <!-- .card -->
 

@@ -26,9 +26,9 @@ module CardHelper
     deleted: 'danger'
   }
 
-  def card_type_icons(type)
+  def card_type_icons(type, klass=nil)
     TYPES.map do |key, value|
-      card_type_icon(key, "#{'d-none' if type.try(:to_sym) != key}")
+      card_type_icon(key, "#{klass} #{'d-none' if type.try(:to_sym) != key}")
     end.join("\n").html_safe
   end
 

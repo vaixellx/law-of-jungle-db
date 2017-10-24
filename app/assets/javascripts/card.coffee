@@ -10,6 +10,9 @@ $ ->
     $('.card-type-icon i').addClass('d-none')
     $(".card-type-icon [data-value='#{value}']").removeClass('d-none')
 
+    $('.card-image-placeholder').addClass('d-none')
+    $(".card-image-placeholder[data-value='#{value}']").removeClass('d-none')
+
   $('.js--card-creator-selector').on 'click', (e) ->
     e.preventDefault()
     text = $(@).text()

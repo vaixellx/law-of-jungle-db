@@ -17,10 +17,10 @@ html {
   }
 
   .card {
-    background-color: #c6ecc6;
+    background-color: #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    color: #37ae37;
+    color: #333;
     display: inline-block;
     height: 406px;
     margin: 10px 0;
@@ -28,12 +28,12 @@ html {
     width: 290px;
 
     .card-title {
-      background-color: #ecf9ec;
+      background-color: #fff;
       border: 1px solid transparent;
       border-radius: 3px;
       box-shadow: none;
       box-sizing: border-box;
-      color: #2b882b;
+      color: #333;
       font-size: 16px;
       outline: none;
       padding: 3px 50px 3px 8px;
@@ -44,9 +44,9 @@ html {
     }
 
     .card-image-placeholder {
-      background-color: #d8f3d8;
+      background-color: #eee;
       border-radius: 3px;
-      color: rgba(#2b882b, 0.2);
+      color: rgba(#333, 0.2);
       font-size: 70px;
       padding-top: 50px;
       position: absolute;
@@ -58,12 +58,12 @@ html {
     }
 
     .card-description {
-      background-color: #ecf9ec;
+      background-color: #fff;
       border-radius: 3px;
       border: 1px solid transparent;
       box-shadow: none;
       box-sizing: border-box;
-      color: #2b882b;
+      color: #333;
       font-size: 16px;
       outline: none;
       padding: 3px 8px;

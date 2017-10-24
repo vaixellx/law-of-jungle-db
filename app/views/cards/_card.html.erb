@@ -1,0 +1,64 @@
+<div class="card-container">
+  <div class="row">
+    <div class="col-9">
+      <%= card_status card.status %>
+    </div> <!-- .col-9 -->
+
+    <div class="col-3 text-right">
+      <div class="dropdown d-inline-block">
+        <a href="#" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+          <i class="fa fa-fw fa-cog"></i> <!-- .fa fa-comments -->
+        <a>
+
+        <div class="dropdown-menu dropdown-menu-right">
+          <%= link_to edit_card_path(card), class: 'dropdown-item' do %>
+            <small>Edit Card</small>
+          <% end %>
+
+          <%= link_to card_path(card), class: 'dropdown-item', data: { confirm: 'Are you sure to delete?' }, method: 'delete' do %>
+            <small>Delete Card</small>
+          <% end %>
+          <!--
+          <div class="dropdown-divider"></div>
+          <h6 class="dropdown-header"><small>Change Status</small></h6>
+
+          <%= link_to edit_card_path(card), class: 'dropdown-item' do %>
+            <small>Draft</small>
+          <% end %>
+
+          <%= link_to edit_card_path(card), class: 'dropdown-item' do %>
+            <small>Printed</small>
+          <% end %>
+
+          <%= link_to edit_card_path(card), class: 'dropdown-item' do %>
+            <small>Approved</small>
+          <% end %>
+
+          <%= link_to edit_card_path(card), class: 'dropdown-item' do %>
+            <small>Modify Needed</small>
+          <% end %>
+
+          -->
+
+        </div> <!-- .dropdown-menu -->
+      </div> <!-- .dropdown d-inline-block -->
+    </div> <!-- .col-3 -->
+  </div> <!-- .row -->
+
+  <div class="card">
+    <div class="card-type-icon"><%= card_type_icon(card.card_type) %></div> <!-- .pull-right -->
+    <%= card_type_icon card.card_type, 'card-image-placeholder' %>
+    <div class="card-title"><%= card.title %></div> <!-- .card-title -->
+    <div class="card-description"><%= card.description %></div> <!-- .card-description -->
+  </div> <!-- .card -->
+
+  <div class="row card-creator-detail">
+    <div class="col-7">
+      <small class="text-muted">Created by</small> <!-- .text-muted -->
+      <strong><%= card.creator %></strong>
+    </div> <!-- .col-7 -->
+    <div class="col-5 text-right">
+      <small class="text-muted">ID#<%= '%05d' % card.id %></small> <!-- .text-muted -->
+    </div> <!-- .col-5 -->
+  </div> <!-- .row -->
+</div> <!-- .card-container -->

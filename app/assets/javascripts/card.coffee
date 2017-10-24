@@ -13,6 +13,8 @@ $ ->
     $('.card-image-placeholder').addClass('d-none')
     $(".card-image-placeholder[data-value='#{value}']").removeClass('d-none')
 
+    $('.card').attr('class', "card #{value}")
+
   $('.js--card-creator-selector').on 'click', (e) ->
     e.preventDefault()
     text = $(@).text()

@@ -33,7 +33,7 @@ html {
       border-radius: 3px;
       box-shadow: none;
       box-sizing: border-box;
-      color: #37ae37;
+      color: #2b882b;
       font-size: 16px;
       outline: none;
       padding: 3px 50px 3px 8px;
@@ -46,7 +46,7 @@ html {
     .card-image-placeholder {
       background-color: #d8f3d8;
       border-radius: 3px;
-      color: rgba(#37ae37, 0.2);
+      color: rgba(#2b882b, 0.2);
       font-size: 70px;
       padding-top: 50px;
       position: absolute;
@@ -63,7 +63,7 @@ html {
       border: 1px solid transparent;
       box-shadow: none;
       box-sizing: border-box;
-      color: #37ae37;
+      color: #2b882b;
       font-size: 16px;
       outline: none;
       padding: 3px 8px;
@@ -85,6 +85,66 @@ html {
       right: 10px;
       top: 14px;
       width: 28px;
+    }
+
+    &.item_help {
+      background-color: #99ccff;
+      color: #0059b3;
+
+      .card-title, .card-description {
+        background-color: #cce6ff;
+        color: #0059b3;
+      }
+
+      .card-image-placeholder {
+        background-color: #b3d9ff;
+        color: rgba(#0059b3, 0.2);
+      }
+    }
+
+    &.item_poke {
+      background-color: #ff9999;
+      color: #b30000;
+
+      .card-title, .card-description {
+        background-color: #ffe6e6;
+        color: #b30000;
+      }
+
+      .card-image-placeholder {
+        background-color: #ffb3b3;
+        color: rgba(#b30000, 0.2);
+      }
+    }
+
+    &.event_town {
+      background-color: #e6ccb3;
+      color: #4d3319;
+
+      .card-title, .card-description {
+        background-color: #f9f2ec;
+        color: #4d3319;
+      }
+
+      .card-image-placeholder {
+        background-color: #ecd9c6;
+        color: rgba(#4d3319, 0.2);
+      }
+    }
+
+    &.event_jungle {
+      background-color: #c6ecc6;
+      color: #2b882b;
+
+      .card-title, .card-description {
+        background-color: #ecf9ec;
+        color: #2b882b;
+      }
+
+      .card-image-placeholder {
+        background-color: #d8f3d8;
+        color: rgba(#2b882b, 0.2);
+      }
     }
   }
 

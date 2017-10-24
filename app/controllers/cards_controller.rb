@@ -2,7 +2,7 @@ class CardsController < ApplicationController
   before_action :load_card, except: :index
 
   def index
-    @cards = Card.all
+    @cards = Card.order(id: :asc)
   end
 
   def new

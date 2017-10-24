@@ -47,7 +47,7 @@
     </div> <!-- .row -->
   <% end %>
 
-  <div class="card">
+  <div class="card <%= card.card_type %>">
     <%= card_type_icon card.card_type, 'card-image-placeholder' %>
     <div class="card-title"><%= card.title %></div> <!-- .card-title -->
     <div class="card-description"><%= card.description %></div> <!-- .card-description -->

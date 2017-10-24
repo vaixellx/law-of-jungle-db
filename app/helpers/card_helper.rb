@@ -4,7 +4,7 @@ module CardHelper
       text: 'อีเว้นท์ป่า',
       icon: 'paw'
     },
-    event_city: {
+    event_town: {
       text: 'อีเว้นท์เมือง',
       icon: 'home'
     },
@@ -12,7 +12,7 @@ module CardHelper
       text: 'ไอเท็มรักษา',
       icon: 'flask'
     },
-    itme_poke: {
+    item_poke: {
       text: 'ไอเท็มกลั่นแกล้ง',
       icon: 'map-signs'
     }

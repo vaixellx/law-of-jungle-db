@@ -8,7 +8,7 @@
   <%= form_for @card, { html: { class: 'card-form' } } do |f| %>
     <%= card_status @card.status %>
 
-    <div class="card">
+    <div class="card <%= @card.card_type %>">
       <%= f.text_field :title, class: 'card-title' %>
       <div class="card-type-icon">
         <%= card_type_icons(@card.card_type) %>

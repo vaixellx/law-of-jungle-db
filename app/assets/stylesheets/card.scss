@@ -179,5 +179,10 @@ html {
     width: 100%;
     height: 198px;
     resize: none;
+    padding: 3px 8px;
+  }
+
+  .popover-body {
+    white-space: pre-wrap;
   }
 }

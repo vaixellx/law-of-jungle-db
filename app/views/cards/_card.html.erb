@@ -1,11 +1,20 @@
 <div class="card-container">
   <% unless local_assigns[:disabled_action] %>
     <div class="row">
-      <div class="col-9">
+      <div class="col-6">
         <%= card_status card.status %>
       </div> <!-- .col-9 -->
 
-      <div class="col-3 text-right">
+      <div class="col-6 text-right">
+        <div class="d-inline-block" style="line-height: 24px; vertical-align: middle;margin-right: 8px; font-size: 24px;">
+          <i  class="fa fa-comments"
+              style="cursor: pointer"
+              data-toggle="popover"
+              data-placement="bottom"
+              title="Comments"
+              data-content="<%= card.note %>">
+          </i> <!-- .fa fa-comments -->
+        </div> <!-- .d-inline-block -->
         <div class="dropdown d-inline-block">
           <a href="#" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-fw fa-cog"></i> <!-- .fa fa-comments -->

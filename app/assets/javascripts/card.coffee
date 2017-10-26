@@ -30,3 +30,5 @@ $ ->
 
     $('#card_status').val(value)
     $('.js--btn-card-status span.text').text(text)
+
+  $('i.fa.fa-comments').popover()

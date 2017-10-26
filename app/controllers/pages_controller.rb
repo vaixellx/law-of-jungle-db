@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def index
-    @cards = Card.order(created_at: :desc).last(6)
+    @cards = Card.order(created_at: :desc).first(6)
   end
 
   def rule

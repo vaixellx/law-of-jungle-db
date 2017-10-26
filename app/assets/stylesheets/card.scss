@@ -88,8 +88,12 @@ html {
       top: 14px;
       width: 28px;
     }
+  }
 
-    &.item_help {
+  .item_help {
+    color: rgba(#0059b3, 0.5);
+
+    &.card {
       background-color: #99ccff;
       color: #0059b3;
 
@@ -103,8 +107,12 @@ html {
         color: rgba(#0059b3, 0.2);
       }
     }
+  }
 
-    &.item_poke {
+  .item_poke {
+    color: rgba(#b30000, 0.5);
+
+    &.card {
       background-color: #ff9999;
       color: #b30000;
 
@@ -118,8 +126,12 @@ html {
         color: rgba(#b30000, 0.2);
       }
     }
+  }
 
-    &.event_town {
+  .event_town {
+    color: rgba(#4d3319, 0.5);
+
+    &.card {
       background-color: #e6ccb3;
       color: #4d3319;
 
@@ -133,8 +145,12 @@ html {
         color: rgba(#4d3319, 0.2);
       }
     }
+  }
 
-    &.event_jungle {
+  .event_jungle {
+    color:rgba(#2b882b, 0.5);
+
+    &.card {
       background-color: #c6ecc6;
       color: #2b882b;
 

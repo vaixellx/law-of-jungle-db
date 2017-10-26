@@ -3,6 +3,7 @@ class CardsController < ApplicationController
 
   def index
     @cards = Card.order(id: :asc)
+    @card_counts = Card.group(:card_type).count.sort_by(&:last)
   end
 
   def new

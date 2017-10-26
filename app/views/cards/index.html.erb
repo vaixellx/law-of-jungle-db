@@ -1,16 +1,26 @@
 <br>
 <div class="container">
-  <div class="pull-right">
-    <%= link_to new_card_path, class: 'btn btn-primary' do %>
+  <div class="pull-right" style="margin-top: 5px;">
+    <%= link_to new_card_path, class: 'btn btn-primary btn-sm' do %>
       <i class="fa fa-plus"></i> <!-- .fa fa-plus -->
       Add New Card
     <% end %>
   </div> <!-- .pull-right -->
 
   <h2>Cards</h2>
-  <p class="text-muted">
-    Total Cards: <%= pluralize @cards.count, 'card' %>
-  </p> <!-- .text-muted -->
+    <div class="row">
+    <div class="col-12 col-sm-6 text-muted text-center text-sm-left">
+      <strong>Total : <%= pluralize @card_counts.sum(&:last), 'card' %></strong>
+      <div style="height:5px" class="d-block d-sm-none"></div>
+    </div> <!-- .col-12 col-sm-6 -->
+
+    <div class="col-12 col-sm-6 text-center text-sm-right">
+      <% @card_counts.each do |key, count|%>
+        <span class="<%= key%>" style="margin: 0 8px;"><%= card_type_icon key%> : <%= count %></span>
+      <% end %>
+    </div> <!-- .col-12 col-sm-6 -->
+  </div>
+
   <hr>
 
   <div class="row">

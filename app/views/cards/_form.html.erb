@@ -24,7 +24,21 @@
 
     <div class="col-12 col-sm-12 col-md-6 col-lg-4">
       <div class="card-container">
+        <div class="d-inline-block" style="margin: 4px 8px 0 0;width: 110px">Card status:</div> <!-- .pull-left -->
+        <div class="dropdown d-inline-block">
+          <a href="#" class="js--btn-card-status btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" style="width: 160px">
+            <span class="text">
+              <%= @card.status.titleize %>
+            </span> <!-- .text -->
+          </a> <!-- .btn-default btn-sm -->
 
+          <div class="js--card-status-dropdown dropdown-menu">
+            <% Card::STATUSES.each do |value| %>
+              <a href="#" class="dropdown-item js--card-status-selector" data-value="<%= value %>" %><%= value.titleize %></a>
+            <% end %>
+          </div> <!-- .dropdown-menu -->
+        </div> <!-- .dropdown -->
+        <%= f.hidden_field :status %>
 
         <div class="d-inline-block" style="margin: 4px 8px 0 0;width: 110px">Card type:</div> <!-- .pull-left -->
         <div class="dropdown d-inline-block">

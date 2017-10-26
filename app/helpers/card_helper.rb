@@ -47,7 +47,7 @@ module CardHelper
 
   def card_status(status)
     content_tag :span,
-                status.capitalize,
+                status.titleize,
                 class: "badge badge-#{STATUSES[status.to_sym]}"
   end
 

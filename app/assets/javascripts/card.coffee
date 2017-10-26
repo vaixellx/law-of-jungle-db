@@ -22,3 +22,11 @@ $ ->
 
     $('#card_creator').val(value)
     $('.js--btn-card-creator span.text').text(text)
+
+  $('.js--card-status-selector').on 'click', (e) ->
+    e.preventDefault()
+    text = $(@).text()
+    value = $(@).attr('data-value')
+
+    $('#card_status').val(value)
+    $('.js--btn-card-status span.text').text(text)

@@ -1,4 +1,4 @@
-<div class="card-container">
+<div class="card-container" id="card-<%= card.id %>">
   <% unless local_assigns[:disabled_action] %>
     <div class="row">
       <div class="col-6">
@@ -6,15 +6,19 @@
       </div> <!-- .col-9 -->
 
       <div class="col-6 text-right">
-        <div class="d-inline-block" style="line-height: 24px; vertical-align: middle;margin-right: 8px; font-size: 24px;">
-          <i  class="fa fa-comments"
-              style="cursor: pointer"
-              data-toggle="popover"
-              data-placement="bottom"
-              title="Comments"
-              data-content="<%= card.note %>">
-          </i> <!-- .fa fa-comments -->
-        </div> <!-- .d-inline-block -->
+        <% if card.note.present? %>
+          <div class="d-inline-block" style="line-height: 24px; vertical-align: middle;margin-right: 8px; font-size: 24px;">
+            <i  class="fa fa-comments"
+                style="cursor: pointer"
+                data-toggle="popover"
+                data-placement="bottom"
+                title="Comment"
+                data-container="#card-<%= card.id %>"
+                data-content="<%= card.note %>">
+            </i> <!-- .fa fa-comments -->
+          </div> <!-- .d-inline-block -->
+        <% end %>
+
         <div class="dropdown d-inline-block">
           <a href="#" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
             <i class="fa fa-fw fa-cog"></i> <!-- .fa fa-comments -->

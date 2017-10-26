@@ -182,7 +182,12 @@ html {
     padding: 3px 8px;
   }
 
+  .popover-body, .popover-header {
+    font-family: 'Kanit', sans-serif;
+  }
+
   .popover-body {
+    min-width: 180px;
     white-space: pre-wrap;
   }
 }

@@ -170,4 +170,14 @@ html {
     font-size: 14px;
     margin-top: -17px;
   }
+
+  .card-note {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+    outline: none;
+    width: 100%;
+    height: 198px;
+    resize: none;
+  }
 }
